@@ -131,7 +131,7 @@ Translations.prototype.getMergedTranslations = function (obj, useDefault) {
   // Case namespace (tree representation)
   if (this.params.tree) {
     // We need to remove parent NS
-    returnTranslations = flat.unflatten(Translations.cleanParents(returnTranslations));
+    returnTranslations = this.unflatten(Translations.cleanParents(returnTranslations));
   }
 
   return returnTranslations;
@@ -174,7 +174,7 @@ Translations.prototype.getFlatTranslations = function () {
  */
 Translations.prototype.getTranslations = function () {
   var _isolatedTranslations = this.formatTranslationsEmpty();
-  return this.params.tree ? flat.unflatten(_isolatedTranslations) : _isolatedTranslations;
+  return this.params.tree ? this.unflatten(_isolatedTranslations) : _isolatedTranslations;
 }
 /**
  * Set translation object to work on
@@ -310,13 +310,27 @@ Translations.prototype.incStat = function (type) {
     this._stats[type]++;
   }
 }
-
 /**
  * Call the adapter to persist to disk
  * @param {Function} adapter Function to call
  */
 Translations.prototype.persist = function (adapter) {
   adapter.persist(this);
+}
+/**
+ * Using unflatten but ignoring dots in angular expressions.
+ * TODO: params
+ */
+Translations.prototype.unflatten = function (target, options) {
+  // replace all dots inside {{ }} with dollars
+  var replaced = {}
+  Object.keys(target).forEach(function(key) {
+    var replacedKey = key.replace(/\{\{[^\}]+/g, function(angular_expression) {
+      return angular_expression.replace(".", "$");
+    });
+    replaced[replacedKey] = target[key];
+  });
+  return flat.unflatten(replaced, options);
 }
 /**
  * Wrap of flat.flatten method

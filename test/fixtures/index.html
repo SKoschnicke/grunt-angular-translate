@@ -46,6 +46,14 @@
 </header>
 
 <!--
+  TEST CASE - Filter HTML
+  Interpolation: {{ }}
+  Double quote
+  Variables with dot
+-->
+  <h1 style="color:red">{{"HtmlFilterDoubleQuote{} interp\"olation {{xx.yy.zz}}" | translate }}</h1>
+
+<!--
   TEST CASE - Directive HTML plural
 -->
 <article tt-default="'MY.CUSTOM.REGEX'|translate">

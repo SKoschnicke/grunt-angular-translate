@@ -57,6 +57,10 @@ msgid "HtmlFilterDoubleQuote{} {{var}}on same line 1/2"
 msgstr ""
 
 msgctxt ""
+msgid "HtmlFilterDoubleQuote{} interp\"olation {{xx.yy.zz}}"
+msgstr ""
+
+msgctxt ""
 msgid "HtmlFilterDoubleQuote{} interp\"olation {{xx}}"
 msgstr ""
 
@@ -130,6 +134,10 @@ msgstr ""
 
 msgctxt ""
 msgid "SUB.NAMESPACE.VAL 2"
+msgstr ""
+
+msgctxt ""
+msgid "SUB.NS.VAL {{var.with.dots}}"
 msgstr ""
 
 msgctxt ""

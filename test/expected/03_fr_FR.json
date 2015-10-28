@@ -15,6 +15,7 @@
     "SUB.NS.VAL 2": "",
     "SUB.NS.VAL 1.test1": "",
     "SUB.NS.VAL 1.test 2": "",
+    "SUB.NS.VAL {{var.with.dots}}": "",
     "SUB.NS.vAL 0": "",
     "all.toto.titi": "",
     "all.tato.tIiti": "",
