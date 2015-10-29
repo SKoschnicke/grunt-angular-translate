@@ -30,7 +30,7 @@
 'use strict';
 
 var _ = require('lodash');
-var flat = require('flat');
+var flatAngular = require('flat-angular');
 
 /**
  * Helper to know if key is a valid translation or an empty one
@@ -322,25 +322,22 @@ Translations.prototype.persist = function (adapter) {
  * TODO: params
  */
 Translations.prototype.unflatten = function (target, options) {
-  // replace all dots inside {{ }} with dollars
-  var replaced = {}
-  Object.keys(target).forEach(function(key) {
-    var replacedKey = key.replace(/\{\{[^\}]+/g, function(angular_expression) {
-      return angular_expression.replace(".", "$");
-    });
-    replaced[replacedKey] = target[key];
-  });
-  return flat.unflatten(replaced, options);
+  if (options) {
+    options['angular'] = true;
+  } else {
+    options = { angular: true };
+  }
+  return flatAngular.unflatten(target, options);
 }
 /**
  * Wrap of flat.flatten method
  * @type {Function}
  */
-Translations.flatten = flat.flatten;
+Translations.flatten = flatAngular.flatten;
 /**
  * Wrap of flat.unflatten method
  * @type {Function}
  */
-Translations.unflatten = flat.unflatten;
+Translations.unflatten = flatAngular.unflatten;
 
 module.exports = Translations;

@@ -53,7 +53,7 @@
   "gitHead": "dd655f85e3b4c59b7f3ac5ebf3f1ccad69876bb8",
   "readmeFilename": "README.md",
   "dependencies": {
-    "flat": "^1.2.0",
+    "flat-angular": "SKoschnicke/flat-angular",
     "json-stable-stringify": "^1.0.0",
     "lodash": "~2.4.1",
     "pofile": "^0.2.12"

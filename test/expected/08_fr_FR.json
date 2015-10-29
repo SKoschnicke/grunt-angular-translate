@@ -11,7 +11,7 @@
                 "test1": "SUB.NS.VAL 1.test1",
                 "test 2": "SUB.NS.VAL 1.test 2"
             },
-            "VAL {{var.with.dots}}": "VAL {{var.with.dots}}"
+            "VAL {{var.with.dots}}": "SUB.NS.VAL {{var.with.dots}}"
         }
     }
 }
