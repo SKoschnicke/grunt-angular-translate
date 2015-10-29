@@ -65,7 +65,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/05_en_US.json' );
     var expected = grunt.file.read( 'test/expected/05_en_US.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '05 - Should equal.' );
 
     test.done();
   },
@@ -75,7 +75,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/06_fr_FR.json' );
     var expected = grunt.file.read( 'test/expected/06_fr_FR.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '06 - Should equal.' );
 
     test.done();
   },
@@ -85,11 +85,11 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/07_fr_FR.json' );
     var expected = grunt.file.read( 'test/expected/07_fr_FR.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '07 fr_FR - Should equal.' );
 
     var actual = grunt.file.read( 'tmp/07_en_US.json' );
     var expected = grunt.file.read( 'test/expected/07_en_US.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '07 en_US - Should equal.' );
 
     test.done();
   },
@@ -99,7 +99,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/08_fr_FR.json' );
     var expected = grunt.file.read( 'test/expected/08_fr_FR.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '08 - Should equal.' );
 
     test.done();
   },
@@ -109,7 +109,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/09_A_fr_FR.json' );
     var expected = grunt.file.read( 'test/expected/09_A_fr_FR.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '09a - Should equal.' );
 
     test.done();
   },
@@ -119,7 +119,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/09_B_fr_FR.json' );
     var expected = grunt.file.read( 'test/expected/09_B_fr_FR.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '09b - Should equal.' );
 
     test.done();
   },
@@ -129,7 +129,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/10_fr_FR.json' );
     var expected = grunt.file.read( 'test/expected/10_fr_FR.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '10 - Should equal.' );
 
     test.done();
   },
@@ -139,7 +139,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.readJSON( 'test/existing/11_en_US.json' );
     var expected = grunt.file.readJSON( 'test/expected/11_en_US.json' );
-    test.deepEqual( actual, expected, 'Should equal.' );
+    test.deepEqual( actual, expected, '11 - Should equal.' );
 
     test.done();
   },
@@ -149,7 +149,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/12_en_US.json' );
     var expected = grunt.file.read( 'test/expected/12_en_US.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '12 - Should equal.' );
 
     test.done();
   },
@@ -159,7 +159,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/template.pot' );
     var expected = grunt.file.read( 'test/expected/template.pot' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, 'template.pot - Should equal.' );
 
     test.done();
   }
